@@ -1,0 +1,71 @@
+.title {
+    text-align: center;
+}
+
+.cartTotal {
+    text-align: center;
+    background-color: $main;
+    color: $white;
+    padding: 10px 0px;
+    width: 40%;
+    margin: auto;
+    display: block;
+}
+.cartPay {
+    text-align: center;
+    color: $black;
+    padding: 10px 0px;
+    width: auto;
+    float: right;
+    cursor: not-allowed;
+}
+.tblCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+.cartTable {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+table.cartTable td, table.cartTable th {
+  border: 1px solid $white;
+  padding: 3px 2px;
+}
+table.cartTable tbody td {
+
+}
+table.cartTable tr:nth-child(even) {
+  background: $light;
+}
+table.cartTable thead {
+  background: $main;
+  border-bottom: 5px solid $white;
+}
+table.cartTable thead th {
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  border-left: 2px solid $white;
+}
+table.cartTable thead th:first-child {
+  border-left: none;
+}
+#remove {
+    color: red;
+}
+.qty {
+    width: 15%;
+    text-align: center;
+}
+.invis {
+    border: none;
+    background: none;
+    
+}
+@media only screen and (max-width: 798px) {
+    .qty {
+        width: 60%;
+    }
+}

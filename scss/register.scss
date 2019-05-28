@@ -1,0 +1,44 @@
+.regform {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.regInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+.regTxt {
+    text-align: center;
+    background-color: $main;
+    color: $white;
+    padding: 10px 0px;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.regBtn {
+    padding: 20px 5px;
+    width: 20%;
+    border: none;
+    background-color: $black;
+    color: $white;
+    cursor: pointer;
+}
+@media only screen and (max-width: 798px) {
+    .regBtn {
+        width: 100%;
+    }
+}
+.link {
+    text-decoration: none;
+    color: $white;
+}

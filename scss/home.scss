@@ -1,0 +1,167 @@
+.hello {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 80%;
+    font-size: 2em;
+    background-color: $white;
+    color: $main;
+}
+.offerBox {
+    position: relative;
+    width: 100%;
+    height: 525px;
+    text-align: center;
+    margin-top: 1%;
+}
+.offerImg {
+    width: 100%;
+    height: 100%;
+}
+.offerTxt {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    width: 50%;
+    font-size: 6em;
+    background-color: lighten($black, 70%);
+    background-color: fade-out($black, 0.5);
+    color: $white;
+}
+// advertisement
+@media only screen and (max-width: 798px) {
+    .offerTxt {
+        font-size: 2em;
+    }
+    .offerBox {
+        height: 200px;
+    }
+}
+.tab {
+    float: left;
+    width: 30%;
+    height: 50vh;
+}
+.tab button {
+    display: block;
+    color: $black;
+    padding: 22.5px 16px;
+    width: 100%;
+    height: 12.5vh;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: $small;
+}
+.tabcontent {
+    float: left;
+    padding: 0px 0px;
+    width: 68%;
+    border-left: none;
+    height: 50vh;
+    overflow-y: hidden;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+@media only screen and (max-width: 798px) {
+    .tabcontent {
+        overflow-y: scroll;
+    }
+}
+
+#whoAreWe {
+    background-color: $white;
+    color: $black;
+}
+#upcomingEvents {
+    background-color: $light;
+    color: $black;
+}
+#contactUs {
+    background-color: $dark;
+    color: $white;
+}
+#ourStore {
+    background-color: $main;
+    color: $white;
+}
+#WhoAreWe {
+    background-color: $white;
+    color: $black;
+}
+#UpcomingEvents {
+    background-color: $light;
+    color: $black;
+}
+#ContactUs {
+    background-color: $dark;
+    color: $white;
+}
+#OurStore {
+    background-color: $main;
+    color: $white;
+}
+.informationCont{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+@media only screen and (max-width:798px) {
+    .informationCont{
+        width: 100%;
+    }
+}
+.profileContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.staffProfile {
+    background-color: $black;
+    color: $white;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 20%;
+    margin: 1%;
+    text-align: center;
+}
+.staff {
+    width: 90%;
+    height: 70%;
+    padding: 5%;
+    margin: 1%;
+}
+@media only screen and (max-width: 798px) {
+    .staffProfile{
+        width: 40%;
+        height: auto;
+    }
+    .staff {
+        height: 70%;
+        width: 90%;
+    }
+}
+#twitter {
+    background-color: $white;
+    border: none;
+}
+#map {
+        height: 350px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin: 0;
+}
+@media only screen and (max-width: 798px) {
+    #map {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 2%;
+    }
+}

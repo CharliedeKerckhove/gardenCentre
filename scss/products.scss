@@ -1,0 +1,124 @@
+.productBackground {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    color: $white;
+    text-align: center;
+    background-image: url(../images/flowers.jpg);
+    background-size: 100% 100%;
+}
+@media only screen and (max-width: 798px) {
+    .productBackground {
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}
+.productBackgroundTxt {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: fade-out($black, 0.3);
+    color: $white;
+}
+.content {
+    width: 80%;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+}
+@media only screen and (max-width: 798px) {
+    .content {
+        width: 100%;
+    }
+}
+.searchTitles {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.productCont {
+    display: inline-flex;
+    width: 100%;
+}
+.productsSorter {
+    display: inline-block;
+    background-color: $main;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    padding-bottom: 5px;
+}
+.productsContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.productImg {
+    width: 150px;
+    height: 150px;
+    margin: 5%;
+}
+@media only screen and (max-width: 798px) {
+    .productImg {
+        width: 80px;
+        height: 80px;
+    }
+}
+.productBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    border: $light solid 2px;
+    color: $black;
+    margin: 1%;
+    position: relative;
+}
+.addBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $main;
+    color: $white;
+    border: none;
+    margin-top: 1%;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.errormsg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $black;
+    color: #ffffff;
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.successmsg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $main;
+    color: $white;
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px 0px;
+    cursor: pointer;
+}

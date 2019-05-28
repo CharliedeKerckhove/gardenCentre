@@ -1,0 +1,364 @@
+// Top navigation
+.navigationTop {
+    height: 70px;
+    width: 100%;
+    background: $white;
+    position: sticky;
+}
+// Top navigation on mobile
+@media only screen and (max-width: 798px) {
+    .navigationTop {
+        display: none;
+    }
+}
+// Logo and branding
+.brand {
+    display: inline-flex;
+    margin-top: 1%;
+}
+.logo {
+    width: auto;
+    height: 60px;
+}
+#logo {
+    display: none;
+}
+// Logo and branding on mobile
+@media only screen and (max-width: 798px) {
+    #logo {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 2.5%;
+        transform: translateX(-50%);
+        z-index: 1;
+        height: 40px;
+    }
+    #dLogo {
+        display: none;
+    }
+}
+// Search bar
+.searchCont {
+    display: block;
+    height: 35px;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: $main;
+    border-width: 2px;
+    a,
+    a:visited {
+        color: $white;
+        text-decoration: none;
+    }
+}
+.searchBar {
+    border: none;
+    background-color: $white;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+// Checkout bar
+.checkoutTxt {
+    color: $black;
+    background-color: $white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.checkout {
+    text-decoration: none;
+    color: inherit;
+}
+.headerIcons {
+    color: $black;
+    background-color: transparent;
+    padding: 3px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+.cart {
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: $main;
+    border-width: 2px;
+    height: 35px;
+}
+#cart {
+    display: none;
+}
+// Checkout bar on mobile
+@media only screen and (max-width: 798px) {
+    #cart {
+        display: block;
+        position: absolute;
+        right: 18px;
+        top: 22px;
+        z-index: 1;
+        color: $white;
+        background-color: $black;
+        padding: 0;
+        border-style: none;
+    }
+}
+// Middle navigation
+.navigation {
+    height: 70px;
+    width: 100%;
+    background: $black;
+    position: sticky;
+    z-index: 1;
+    display: inline-flex;
+}
+// Middle navigation on mobile
+@media only screen and (max-width: 798px) {
+    .navigation {
+        height: 70px;
+    }
+}
+// Container with no padding for navbar
+.nav-container {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 798px) {
+    .nav-container {
+        width: 100%;
+    }
+}
+// Navigation 
+nav {
+    float: right;
+    width: 100%;
+    ul {
+        list-style: none;
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 0;
+        li {
+            float: left;
+            position: relative;
+            a,
+            a:visited {
+                display: block;
+                padding: 0 20px;
+                line-height: $nav-height;
+                background: $black;
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    background: $main;
+                    color: $white;
+                }
+                &:not(:only-child):after {
+                    padding-left: 4px;
+                }
+            }
+            // Dropdown list
+            ul li {
+                min-width: 190px;
+                a {
+                    padding: 15px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $black;
+    height: $nav-height;
+    width: $nav-height;
+}
+@media only screen and (max-width: 798px) {
+    // Hamburger nav visible on mobile only
+    .nav-mobile {
+        display: block;
+    }
+    nav {
+        width: 100%;
+        padding-top: 70px;
+        ul {
+            display: none;
+            li {
+                float: none;
+                a {
+                    padding: 15px;
+                    line-height: 20px;
+                }
+                ul li a {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+    .nav-dropdown {
+        position: static;
+    }
+}
+// Prevents changing views bug
+@media screen and (min-width: $breakpoint) {
+    .nav-list {
+        display: flex !important;
+        flex-wrap: nowrap;
+    }
+    .nav-list2 {
+        display: inline-flex !important;
+    }
+}
+// Hamburger animation
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    span,
+    span:before,
+    span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: $white;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+    }
+    span:before {
+        top: -10px;
+    }
+    span:after {
+        bottom: -10px;
+    }
+    &.active span {
+        background-color: transparent;
+        &:before,
+        &:after {
+            top: 0;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+// Bottom navigation
+.navigationBottom {
+    height: 35px;
+    width: 100%;
+    background-color: transparent;
+    position: sticky;
+    color: $black;
+}
+// Bottom navigation on mobile
+@media only screen and (max-width: 798px) {
+    .navigationBottom {
+        display: none;
+    }
+}
+// Container with no padding for navbar
+.nav-container2 {
+    max-width: 80%;
+    margin: 0 auto;
+}
+// Bottom navigation text
+.a2 {
+    background: none !important;
+    color: $black !important;
+    line-height: 35px !important;
+    &:hover {
+            border-bottom: 2px solid $main;
+            color: $main;
+        }
+}
+// Font resize buttons
+.txtResize {
+    border-style: none;
+    margin-left: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    color: $black;
+        &:hover {
+            color: $main;
+        }
+}
+#txtDecrease {
+    font-size: $small;
+}
+#txtNorm {
+    font-size: $small + 0.2em;
+    font-weight: 500;
+}
+#txtIncrease {
+    font-size: $small + 0.4em;
+    font-weight: 600;
+}
+// Bottom navigation
+.btnContainer {
+    display: none;
+}
+//Bottom navigation on mobile
+@media only screen and (max-width: 798px) {
+    .btnContainer {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: $white;
+    }
+}
+// Reize text dropdown
+.resizeDrop {
+    position: relative;
+    display: inline-block;
+}
+.resizeDropContent {
+    display: none;
+    position: absolute;
+    background-color: $main;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+}
+.styleDrop {
+    display: flex;
+    justify-content: space-evenly;
+}
+// Search bar
+#searchCont {
+    display: none;
+}
+// Search bar on mobile
+@media only screen and (max-width: 798px) {
+    #searchCont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+    }
+}

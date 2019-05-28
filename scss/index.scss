@@ -1,0 +1,42 @@
+
+$a: #282828;
+$b: #D9D9D9;
+$c: #EFEFEF;
+$d: #404040;
+// Navigation Variables
+$content-width: 1024px;
+$breakpoint: 799px;
+$nav-height: 70px;
+
+// Colors
+$main: #00a859;
+$dark: darken(#54cd52, 15%);
+$light: lighten(#54cd52, 15%);
+$white: #ffffff;
+$black: #262626;
+$grey: lighten($black, 70%);
+
+// Fonts
+$font: Roboto, sans-serif;
+$small: 1em;
+$medium: 1.1em;
+$large: 1.2em;
+$xlarge: 1.4em;
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+    font-family: $font;
+}
+//header css
+@import 'header';
+//home page css
+@import 'home';
+//products page css
+@import 'products';
+//register page css
+@import 'register';
+//checkout page css
+@import 'checkout';
